@@ -1,0 +1,109 @@
+body{
+    background-color: black; 
+    color: white;
+}
+
+h1 {
+    color: white;
+    }
+
+h2, h4, h5, h6 {
+    color: lightgray;
+    }
+
+.quotes{
+    text-align: center;
+}
+
+h3 {
+    background-color: grey; 
+    color: black;
+    }   
+
+p {color: grey;
+   font-size: larger;
+  }
+
+.clientname{
+    font-size: 18pt;
+    color: lightgray;            
+}
+
+.footer{
+    color:grey; 
+    font-size: xx-large;
+}
+
+ol {
+    color: rosybrown;
+}
+
+ul {color: yellow;
+}
+
+.cohesivelist{
+    background-color: purple;
+}
+ul.cohesivelist{
+    font-style: italic;
+}
+
+table{
+    background-color: grey; 
+    color: black;
+    border: 1px solid black;
+}
+
+th, td { 
+    border: 2px solid black;
+    text-align: center;
+}
+
+.listhead {
+    font-size: larger;        
+}
+
+li.listhead{ 
+    font-weight: bolder;   
+}
+
+.finer{
+    font-weight: normal;
+ }
+
+.nopoints{
+    list-style: none;
+    color: grey;
+}
+
+footer#footnav{
+    clear:both;
+    width:100%;
+    display: block;
+    text-align: center;
+}
+
+#footnav{
+    list-style: none;
+    margin: 0;
+}
+
+#footnav nav ul li{
+    padding: 0;
+    margin: 0 100px 0 0;
+    display: inline;
+}
+
+header#pageheader{
+    width: 100%;
+    text-align: center;
+     
+}
+
+section#posts{
+    float: left;
+    width: 85%;
+}
+section#posts img{
+    float:right;
+}
