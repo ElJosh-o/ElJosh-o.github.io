@@ -8,7 +8,7 @@ h1 {
     }
 
 h2, h4, h5, h6 {
-    color: lightgray;
+    color: white;
     }
 
 .quotes{
@@ -20,7 +20,7 @@ h3 {
     color: black;
     }   
 
-p {color: grey;
+p {color: white;
    font-size: larger;
   }
 
