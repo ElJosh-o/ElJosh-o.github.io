@@ -107,3 +107,10 @@ section#posts{
 section#posts img{
     float:right;
 }
+
+a
+{ color: white;}
+
+a:visited {
+    color: lightslategray;
+  }
