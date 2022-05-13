@@ -30,7 +30,7 @@
         Automated discovery uses tools to make the process more efficient than manual discovery would have been. This involves using tools such as ffuf, dirbuster or gobuster.<br>
         
         OSINT utilises publicly available information. This can come from search engines or publicly accessible websites.<br>
-         </p><br>
+         </p>
          <h5>Questions</h5>
     <ul class="nopoints">
         <li>What is the Content Discovery method that begins with M?<br>
@@ -39,98 +39,183 @@
             Automated</li>
         <li>What is the Content Discovery method that begins with O?<br>
             OSINT</li>
-        <li>4</li>
-    </ul>
-    <h4>Task 2: Manual Discovery - Robots.txt</h4>
-    <p></p><br>
-    <ul class="nopoints">
-        <li>1</li>
-        <li>2</li>
-        <li>3</li>
-        <li>4</li>
-    </ul>
-    <h4>Task 3: Manual Discovery - Sitemap.xml</h4>
-    <p></p><br>
-    <ul class="nopoints">
-        <li>1</li>
-        <li>2</li>
-        <li>3</li>
-        <li>4</li>
-    </ul>
-    <h4>Task 4: Manual Discovery - HTTP Headers</h4>
-    <p></p><br>
-    <ul class="nopoints">
-        <li>1</li>
-        <li>2</li>
-        <li>3</li>
-        <li>4</li>
-    </ul>
-    <h4>Task 5: Manual Discovery - Framework Stack</h4>
-    <p></p><br>
-    <ul class="nopoints">
-        <li>1</li>
-        <li>2</li>
-        <li>3</li>
-        <li>4</li>
-    </ul>
-    <h4>Task 6: OSINT - Google Hacking/Dorking</h4>
-    <p></p><br>
-    <ul class="nopoints">
-        <li>1</li>
-        <li>2</li>
-        <li>3</li>
-        <li>4</li>
-    </ul>
-    <h4>Task 7: OSINT - Wappalyzer</h4>
-    <p></p><br>
-    <ul class="nopoints">
-        <li>1</li>
-        <li>2</li>
-        <li>3</li>
-        <li>4</li>
-    </ul>
-    <h4>Task 8: OSINT - Wayback Machine</h4>
-    <p></p><br>
-    <ul class="nopoints">
-        <li>1</li>
-        <li>2</li>
-        <li>3</li>
-        <li>4</li>
-    </ul>
-    <h4>Task 9: OSINT - GitHub</h4>
-    <p></p><br>
-    <ul class="nopoints">
-        <li>1</li>
-        <li>2</li>
-        <li>3</li>
-        <li>4</li>
-    </ul>
-    <h4>Task 10: OSINT - S3 Buckets</h4>
-    <p></p><br>
-    <ul class="nopoints">
-        <li>1</li>
-        <li>2</li>
-        <li>3</li>
-        <li>4</li>
-    </ul>
-    <h4>Task 11: OSINT - S3 Buckets</h4>
-    <p></p><br>
-    <ul class="nopoints">
-        <li>1</li>
-        <li>2</li>
-        <li>3</li>
-        <li>4</li>
-    </ul>
-    
-    <h4>Task 12: Automated Discovery </h4>
-    <p></p><br>
-    <ul class="nopoints">
-        <li>1</li>
-        <li>2</li>
-        <li>3</li>
-        <li>4</li>
     </ul>
 
+    <h4>Task 2: Manual Discovery - Robots.txt</h4>
+    <p>Robots.txt tells search engines which pages they are allowed to display and ban specific search engines from crawling the website.<br>
+        Some of these restrictions are to hide admin portals or files that only the customers are meant to see.<br>
+        
+        Further information on how robots.txt can be found here: https://seosherpa.com/robots-txt/ <br>
+        Some key takeaways from this document are that different search engines follow different sets of rules and that regular expressions can be used when building the rules.<br></p>
+         <h5>Questions</h5>
+    <ul class="nopoints">
+        <li>What is the directory in the robots.txt that isn't allowed to be viewed by web crawlers?<br>
+            /staff-portal</li>
+    </ul>
+    <h4>Task 3: Manual Discovery - Favicon</h4>
+    <p>This is a favicon, it's a small icon displayed in the browser's address bar or
+        tab and is used for branding. It is possible for the favicon of a framework
+        used to build a site to be left behind if the developer doesn't replace it with
+        a custom one, giving a clue about which framework is in use.
+        
+        OWASP have a database of favicons and MD5 hashes [https://wiki.owasp.org/index.php/OWASP_favicon_database]. When one is found, it can be downloaded, hashed and then searched for in the list.
+        </p><br>
+        <h5>Questions</h5>
+        <ul class="nopoints">
+            <li>What framework did the favicon belong to??<br>
+                Cgiirc</li>
+        </ul>
+    <h4>Task 4: Manual Discovery - Sitemap.xml</h4>
+    <p>Sitemap.xml gives a list of of every files the website owner wishes to be listed on a search engine.
+        This can include pages that are no longer used by the site but are still hosted.<br><br>
+        
+        Properly structured sitemaps are useful for SEO.
+        </p><br>
+        <h5>Questions</h5>
+        <ul class="nopoints">
+            <li>What is the path of the secret area that can be found in the sitemap.xml file?<br>
+                /s3cr3t-area</li>
+        </ul>
+    <h4>Task 5: Manual Discovery - HTTP Headers</h4>
+    <p>HTTP headers contain a lot of information. This can include webserver software and potentially the scripting language used.<br>
+        HTTP request and response headers are worth doing a whole article on by themselves and feature in Burp quite a lot.<br>
+        <br>
+        In addition to Burp Suite curl can also be used for this.<br>
+        <br>
+        What is curl?[https://phoenixnap.com/kb/curl-command]<br>
+        Traversy Media: Basic Curl tutorial https://www.youtube.com/watch?v=7XUibDYw4mc<br><br><!--Tidy up these URIs-->
+        
+        Curl is a command line tool that enables data transfer over various network protocols.<br>
+        It can be used directly or included in a script, with the most common usages of it being:<br>
+        Downloading files [-o filename/ -O for post or other requests]<br>
+        Endpoint testing<br>
+        Debugging <br>
+        Error logging<br>
+        -u [user]:[pass] for accreditation on an api<br>
+        --limit-rate limits the speed of download <br>
+        -L follow redirect</p><br>
+    <h5>Questions</h5>
+    <ul class="nopoints">
+        <li>What is the flag value from the X-FLAG header?<br>
+            THM{HEADER_FLAG}</li>
+    </ul>
+    <h4>Task 6: Manual Discovery - Framework Stack</h4>
+    <p>One the framework has been identified it is possible to find more information about it and find other information through the manual or other websites.<br> 
+
+        The https://static-labs.tryhackme.cloud/sites/thm-web-framework/changelog.html website provides a very simple example of this.
+        </p><br>
+    <h5>Questions</h5>
+    <ul class="nopoints">
+        <li>What is the flag from the framework's administration portal?<br>
+            THM{CHANGE_DEFAULT_CREDENTIALS}</li>
+    </ul>
+    <h4>Task 7: OSINT - Google Hacking/Dorking</h4>
+    <p>The first open source resource covered is google dorking. This uses an sql style syntax to refine the search 
+<!--Convert this into a table -->
+        Filter
+        Example
+        Description
+        site
+        site:tryhackme.com
+        returns results only from the specified website address
+        inurl
+        inurl:admin
+        returns results that have the specified word in the URL
+        filetype
+        filetype:pdf
+        returns results which are a particular file extension
+        intitle
+        intitle:admin
+        returns results that contain the specified word in the title
+        </p><br>
+    <h5>Questions</h5>
+    <ul class="nopoints">
+        <li>What Google dork operator can be used to only show results from a particular site?<br>
+            Site:</li>
+    </ul>
+    <h4>Task 8: OSINT - Wappalyzer</h4>
+    <p>Wappalyzer helps identify what technologies a website uses.<br>
+        From frameworks and content management systems to payment processors and more.<br>
+        It is designed for sales teams to get an understanding of competitors products and remain competitive. The information it provides is also useful to penetration testers.</p><br>
+
+    <h4>Task 9: OSINT - Wayback Machine</h4>
+    <p>Functions as a historical archive of websites. You can find pages that might have since become hidden, or view information from deleted posts.</p><br>
+
+    <h4>Task 10: OSINT - GitHub</h4>
+    <p>Day 16 of Advent of Cyber 3 covers this well [https://tryhackme.com/room/adventofcyber3] 
+        If you find that you have accidentally committed some private data to github have a look at the tutorial below.
+        <a href=" https://www.howtogeek.com/devops/how-to-remove-a-commit-from-github/" target="_blank" rel="noreferrer noopener"> https://www.howtogeek.com/devops/how-to-remove-a-commit-from-github/ </p><br>
+        </a>
+    <h4>Task 11: OSINT - S3 Buckets</h4>
+    <p>I need to spend some time researching AWS more before updating this.<br>
+        S3 [Simple Storage Service) buckets are a storage service that lets files and static web content be saved in the cloud and accessed over HTTP/S. They can be misconfigured and left publicly accessible.<br>
+        <!--       - Research idea. Set up a S3 bucket for the website-->
+ </p><br>
+
+    <h4>Task 12: Automated Discovery </h4>
+    <p>There are programs and wordlists that can be used to search through a website faster than humans can.<br>
+
+        Many resources suggest Daniel Miessler's Seclists for this purpose<br>
+        
+        Tools<br>
+        This section looks at three tools<br>
+        
+        <u>ffuf</u>u><br>
+        Fast web fuzzer written in Go. Fuzz faster u fool.<br>
+        
+        <a href="https://www.youtube.com/watch?v=UDaeS7455mU" target="_blank" rel="noreferrer noopener">Intigriti FFUF tutorial</a><br>
+        Fuzzing is the process of running through a whole wordlist and finding end points. It is also possible to use post.<br>
+        A lot of websites will default to the 200 status code [OK] and it is possible to filter this out using the -fs switch and choosing the commonly appearing size.<br>
+        <br>
+        Post request options<br>
+        <br>
+        -w: wordlist <br>
+        -u url [use FUZZ for the area to substitute]<br>
+        -fs: Filter Size <br>
+        -X: HTTP Method<br>
+        -d: “POST data” [this can be used for JSON data]<br>
+        <br>
+        Bug Bounty Parameters<br>
+        -t: Threads<br>
+        -rate: Req/s<br>
+        -H: “name: value” [inject header]<br>
+        -b: “name=value” [set cookies]<br>
+        <br>
+        Recursion and redirects<br>
+        -recursion: [only works if FUZZ is at end of URI]<br>
+        -recursion-depth: [how deep e.g.2]<br>
+        -r: follow Redirects<br>
+        <br>
+        Matcher options		Filter options<br>
+        -mc: Code			-fc<br>
+        -ml: Lines			-fl<br>
+        -mr: Regex			-fr<br>
+        -ms: Size			-fs<br>
+        -mw: Words			-fw<br>
+        
+        <br>
+        <br>
+        <br>
+        
+        <u>dirb</u><br>
+        <a href="https://www.youtube.com/watch?v=WZDx3zk8NwI" target="_blank" rel="noreferrer noopener">Bcyber dirb tutorial</a><br>
+        
+        -X: shows particular eXtensions [e.g. .php]<br>
+        -x: wordlist of extensions [/path/to/extlist]<br>
+        -N: ignore a HTTPS status code [e.g. -N 200], this can be used to filter out OK pages as ones that throw errors are more likely to provide information about the backend.<br>
+        -t: don't force an ending forward slash. Can be used to search for the wordlist after the uri<br>
+        -R: Recursive query (y/n)<br>
+        -r: Recursive<br>
+        -w: ignore Warning<br>
+        -v: Verbose<br>
+        -S: Silent [use for dumb/low processing power terminals]<br>
+        -z: adds delay to limit excessive flood. (500 is .5s)<br>
+        -o: save Output to file<br>
+        
+        <u>Gobuster</u>
+        
+        </p><br>
+  
 </p>
 <a href="https://github.com/ElJosh-o" target="_blank" rel="noreferrer noopener"><img src="IndexImages/github.png" alt="Github Logo" width=200></a><br>
 <a href="https://tryhackme.com/p/vonlipwig" target="_blank" rel="noreferrer noopener"><img src="IndexImages/thm2.png" alt="TryHackMe Logo" width=200></a><br>
