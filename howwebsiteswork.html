@@ -1,0 +1,99 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Josh's Portfolio Website </title>
+	<meta charset="utf-8">
+    <meta name="Description" content="Josh Hollyfield Kali Linux Setup">
+    <meta name="Author" content="Josh Hollyfield">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href=jha.css />
+
+</head>
+
+<body>
+
+<header id="pageheader">
+    <h1>Josh's Place </h1>
+    <h2></h2>
+</header>
+<section id="posts">
+<p>Complete Beginner<br>
+    <h3>How Websites Work</a></h3>
+    <h4>Task 1: How Websites Work</h4>
+    <p>Websites have two main components:</br>
+        1.The Front End/Client Side – This is how your browser renders a website<br>
+        2. Back End/Server Side – A server that processes requests and returns responses<br>
+        
+        At it’s most basic a client makes a request to a server and the server responds with information</br>
+         </p>
+
+
+    <h4>Task 2: HTML</h4>
+    <p>Websites are primarily created using three tools<br>
+        HTML – To build a site and define it’s structure<br>
+        CSS- Cascading Style Sheets. These provide style that can be spread across the whole site</br>
+        JavaScript – A scripting language that allows for implementation of complex features on webpages.<br></p>
+
+        The HTML structure above has the following comp	onents.
+- <#!DOCTYPE html> defines the page as a HTML5 document. This tells the browser to use HTML5 to interpret the page and helps with standardisation across the different browsers.
+DOCTYPEs are required for legacy reasons
+
+- <#html> is the root element of the page. Everything else comes after (within) the html tags
+
+- <#head> contains information about the page title. e.g what shows up on the title of the browser.
+
+- <#body> defines the HTML document’s body; only content inside the body is shown in the browser.
+
+- <#h1> defines a large heading. There are six or so different <h#> tags.
+
+- <#p> is for a paragraph
+
+In addition to the above there are tags for buttons, images and a lot more.
+Elements can have class tags e.g <p class="bold-text"> or src attributes (linking to a source image) such as <img src=”img/mypic.jpg”>
+An id attribute can also be given <p id=”myid”>.
+In contrast to class attributes, which can be used multiple times, e.g everything could be given class=”bold-text”__ elements must have different ID’s to be uniquely identified.
+
+
+    <h4>Task 3: JavaScript</h4>
+    <p>JavaScript is one of the most popular programming languages in the world and allows for interactivity on webpages.
+        HTML creates the structure of a page whilst JS is used to control the functionality.
+        
+        It is difficult to articulate how this is used without making an example myself.
+        </p><br>
+
+    <h4>Task 4: Sensitive Data Exposure</h4>
+    <p>This occurs when sensitive clear-text information is accessible to the end user
+        This should be one of the first places that you look at for exposed credentials or hidden links.    
+    </p><br>
+        
+    <h4>Task 5: HTML Injection</h4>
+    <p>Injection, a classic.. This is when unfiltered user input impacts on what a website is doing.
+        Ideally anywhere that a user can input text will have ways of sanitising it to ensure that no code can be run.
+        
+        HTML injection is client side, effecting only how the website outputs content to the client. This is in contrast to something like SQL injection which deals with the database stored on the server.
+        
+        <a href="http://hacker.com">link text</a> </p><br>
+
+       
+  
+</p>
+<a href="https://github.com/ElJosh-o" target="_blank" rel="noreferrer noopener"><img src="IndexImages/github.png" alt="Github Logo" width=200></a><br>
+<a href="https://tryhackme.com/p/vonlipwig" target="_blank" rel="noreferrer noopener"><img src="IndexImages/thm2.png" alt="TryHackMe Logo" width=200></a><br>
+<br>
+</section>
+
+<footer id="footnav">
+<nav>
+    <ul class="footer">
+        <hr>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="skillsbootcamp.html">InDigital Skills Bootcamp</a></li>
+        <li><a href="thmwalkthroughs.html">TryHackMe</a></li>
+        <li><a href="readinglist.html">Suggested Reading</a></li>
+    </ul>
+</nav>
+</footer>
+</body>
+
+</html>
